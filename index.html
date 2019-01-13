@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+        <meta charset="UTF-8">
+        <title>Train Time Table</title>
+
+        <!--External CSS-->
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+                crossorigin="anonymous">
+                <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Catch a Ride with Train</h1>
+        <!--Search Parameters Div-->
+        <div class="card" id="parametersDiv">
+            <div class="card-header">
+                <div class = "row"> 
+                        <div class = "col-sm-7"><b>Train List</b></div>
+                        <div class = "col-sm-5" id="time"><b>a</b></div>
+                </div>
+                
+            </div>
+            <div class="card-body">
+                    <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col" style="color:brown">Train_Name</th>
+                                <th scope="col" style="color:blue">Destination</th>
+                                <th scope="col" style="color:yellowgreen">Frequency</th>
+                                <th scope="col" style="color:red">Next_Stop</th>
+                                <th scope="col" style="color:green">Time_Left</th>
+                              </tr>
+                            </thead>
+                            <tbody id="rate"> <!-- data goes here-->
+                            </tbody>
+                          </table>
+                
+            </div>
+        </div>
+        <br>
+        <!--Results Div-->
+        <div class="card">
+            <div class="card-header">
+                     <center>Train Information</center>
+            </div>
+            <div class="card-body" id="Train_Table">
+                    <form>
+                            <div class="form-group">
+                                <label><b>Train Name:</b></label>
+                                <input type="text" class="form-control" id="Train_Name">
+                            </div>
+                            <div class="form-group">
+                                <label><b>Destination:</b></label>
+                                <input type="text" class="form-control" id="destination">
+                            </div>
+                            <div class="form-group">
+                                <label ><b>First Train Time (HH:MM) :</b> </label>
+                                <input type="text" class="form-control" id="firstTrain">
+                            </div>
+                            <div class="form-group">
+                                <label><b>Frequency (Mins) :</b></label>
+                                <input type="number" class="form-control" id="frequency">
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-primary btn-sm" id="add">Find</button>
+            </div>
+               
+        </div>
+
+    
+    </div>
+</div>
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"> </script>
+<script src="train.js"></script>
+
+</body>
+
+</html>
